@@ -1,0 +1,6 @@
+{
+  "name": "The Market Times",
+  "description": "An elegant, New York Times styled financial learning and stock analysis application, featuring editorial essays, real-time index tickers, custom candlestick charts, and generative AI analysis columns.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
