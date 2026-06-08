@@ -7,11 +7,13 @@ import YahooFinance from "yahoo-finance2";
 
 dotenv.config();
 
-const yahooFinance = new YahooFinance();
+// Safe interop for ESBuild CJS and TSX Default Exports
+const YahooFinanceClass: any = (YahooFinance as any).default || YahooFinance;
+const yahooFinance = new YahooFinanceClass();
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
   app.use(express.json());
 
